@@ -157,7 +157,7 @@ int p7b(){
     // i for number of rows
     while (i <= n)
     { 
-        int value = i;
+        
         int j = i; //for number of columns
         while(j<=2*i){
             cout<<j<<" ";
@@ -167,6 +167,177 @@ int p7b(){
         cout<<endl;
         i++;
     }
+    return 0;
+}
+
+int p8(){
+       int n;
+    cout<<"Enter number ";
+    cin >> n;
+
+    int i = 1;
+    // i for number of rows
+    while (i <= n)
+    { 
+        
+        int j = 1; //for number of columns
+        while(j<=i){
+            cout<<i-j+1<<" ";
+            
+            j++;
+        }
+        cout<<endl;
+        i++;
+    }
+    return 0;
+}
+
+int p9(){
+       int n;
+    cout<<"Enter number ";
+    cin >> n;
+
+    int i = 1;
+    // i for number of rows
+    while (i <= n)
+    { 
+       
+        int j = 1; //for number of columns
+       
+        while(j<=n){
+            char ch = 'A'+i-1;
+            cout<<ch;
+            
+            j++;
+        }
+        cout<<endl;
+        i++;
+    }
+    return 0;
+}
+
+int p10(){
+       int n;
+    cout<<"Enter number ";
+    cin >> n;
+
+    int i = 1;
+    // i for number of rows
+    while (i <= n)
+    { 
+       
+        int j = 1; //for number of columns
+       
+        while(j<=n){
+            char ch = 'A'+j-1;
+            cout<<ch;
+            
+            j++;
+        }
+        cout<<endl;
+        i++;
+    }
+    return 0;
+}
+
+int p11(){
+       int n;
+    cout<<"Enter number ";
+    cin >> n;
+
+    int i = 1;
+    // i for number of rows
+    char start = 'A';
+    while (i <= n)
+    { 
+       
+        int j = 1; //for number of columns
+       
+        while(j<=n){
+            
+            cout<<start;
+            start++;
+            j++;
+        }
+        cout<<endl;
+        i++;
+    }
+    return 0;
+}
+
+int p12(){
+       int n;
+    cout<<"Enter number ";
+    cin >> n;
+
+    int i = 1;
+    // i for number of rows
+    while (i <= n)
+    { 
+       
+        int j = 1; //for number of columns
+       
+        while(j<=n){
+            char ch = 'A'+i+j-2;
+            cout<<ch;
+            
+            j++;
+        }
+        cout<<endl;
+        i++;
+    }
+    
+    return 0;
+}
+int p13(){
+       int n;
+    cout<<"Enter number ";
+    cin >> n;
+
+    int i = 1;
+    // i for number of rows
+    while (i <= n)
+    { 
+       
+        int j = 1; //for number of columns
+       
+        while(j<=i){
+            char ch = 'A'+i-1;
+            cout<<ch;
+            
+            j++;
+        }
+        cout<<endl;
+        i++;
+    }
+    
+    return 0;
+}
+
+int p14(){
+       int n;
+    cout<<"Enter number ";
+    cin >> n;
+
+    int i = 1;
+    char value = 'A';
+    // i for number of rows
+    while (i <= n)
+    { 
+       
+        int j = 1; //for number of columns
+       
+        while(j<=i){
+            
+            cout<<value;
+            value++;
+            
+            j++;
+        }
+        cout<<endl;
+        i++;
+    }
+    
     return 0;
 }
 int main()
@@ -179,6 +350,13 @@ int main()
 // p5();
 // p6();
 // p7();
-p7b();
+// p7b();
+// p8();
+// p9();
+// p10();
+// p11();
+// p12();
+// p13();
+p14();
     return 0;
 }
