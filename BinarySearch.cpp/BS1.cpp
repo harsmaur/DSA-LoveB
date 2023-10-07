@@ -13,7 +13,7 @@ int BinarySearch(int arr[], int size, int key){
 
     int low = 0;
     int high = size-1;
-    int mid = (low+high)/2;
+    int mid = (low+(high-low)/2);
 
     while(low<=high){
         if(arr[mid] == key){
@@ -25,7 +25,7 @@ int BinarySearch(int arr[], int size, int key){
         else{
             high = mid-1;
         }
-       mid = (low+high)/2;
+       mid = (low+(high-low)/2);
     }
     return -1;
 }
