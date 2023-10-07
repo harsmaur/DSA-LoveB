@@ -15,15 +15,15 @@ void SortOneZero(int arr[], int n){
 
     while(left < right){
 
-
-        if(arr[left] == 0){
-         left++;
+/* Increment left index while we see 0 at left */
+        while(arr[left] == 0 && left < right){
+            left++;
         }
-        else if(arr[right] == 1){
+        while(arr[right] == 1 && left < right){
 
             right--;
         }
-        // means both are
+        // (arr[i] == 1 && arr[j] == 0) then
         swap(arr[left], arr[right]);
         left++;
         right--;
