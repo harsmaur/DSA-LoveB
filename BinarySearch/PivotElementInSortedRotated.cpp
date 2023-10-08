@@ -21,7 +21,7 @@ int PivotElement(int arr[], int size) {
 
 int main() {
     int arr[5] = {3, 8, 10, 17, 1};
-    cout << PivotElement(arr, 5);
+    cout<<PivotElement(arr, 5);
 
     return 0;
 }
