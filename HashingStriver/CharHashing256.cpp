@@ -8,7 +8,7 @@ int main()
     cin >> s;
    
     
-
+ 
     // precompute:
     int hash[256] = {0};
     for (int i = 0; i < s.size(); i++)
