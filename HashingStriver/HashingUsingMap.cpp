@@ -36,5 +36,6 @@ cout<<"Enter queries"<<endl;
         // fetching:
         cout << mpp[number] << endl;
     }
+    
     return 0;
 }
