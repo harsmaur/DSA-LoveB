@@ -54,4 +54,4 @@ int findPages(vector<int>& arr, int n, int m) {
         mid = s+(e-s)/2;
     }
     return ans;
-}
+} 
