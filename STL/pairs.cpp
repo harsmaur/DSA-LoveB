@@ -1,4 +1,5 @@
 #include <iostream>
+#include<algorithm>
 #include <bits/stdc++.h>
 #include <vector>
 using namespace std;
@@ -40,6 +41,8 @@ void ExplainVector()
 
     vector<int> v4(5); //(size)
     //
+    cout<<v4.front()<<endl; //front elemnent
+    cout<<v4.back()<<endl; //back element
 
     // iterating through the vector
     vector<int>::iterator it = v.begin();
@@ -78,6 +81,7 @@ void ExplainVector()
     vd.push_back(3);
     vd.push_back(4);
     vd.push_back(5);
+    // vd.pop_back();
 
     // Deleting the elements
     vd.erase(vd.begin(), vd.begin() + 2);
@@ -121,7 +125,7 @@ void ExplainVector()
 
 void ExplainList(){ 
     //Similiar to vector with front operations
-
+    //random acxcess not possible (ls.at(1)) this is not possible
     list<int> ls;
     ls.push_back(1);    // {1}
     ls.emplace_back(2); // {1,2}
@@ -205,6 +209,7 @@ cout<<endl;
 }
 
 void ExplainPQ(){
+    //max Heap --> stores in non ascending order
  priority_queue<int> pq;
  pq.push(1);
  pq.push(6);
@@ -219,6 +224,7 @@ void ExplainPQ(){
  //size swap empty fn same as others
 
 cout<<"Min heap"<<endl;
+
  //Minimum Heap
  priority_queue<int, vector<int>, greater<int>> pqm;
  pqm.push(1);
@@ -251,7 +257,7 @@ void ExplainSET(){
 
     auto ite = st.find(6); 
 
-    int cnt = st.count(3);
+    int cnt = st.count(3); //std::count() returns the number of occurrences of an element in a given range. 
     auto it1 = st.find(2);
     auto it2 = st.find(4);
 
@@ -260,6 +266,7 @@ void ExplainSET(){
 
 
 }
+
 void ExplainMultiSET(){
     //everything is same as set but not unique
     multiset<int> ms;
@@ -376,6 +383,24 @@ cout<<endl;
     do{
         cout<<s<< " "<<endl;
     }while(next_permutation(s.begin(), s.end()));
+
+//Binary Search algo stl
+
+    vector<int> love;
+    love.push_back(1);
+    love.push_back(2);
+    love.push_back(3);
+    love.push_back(4);
+   
+   cout<<binary_search(love.begin(), love.end(), 5);
+
+ //reverse string
+   string abcd = "abcd";
+   reverse(abcd.begin(), abcd.end());
+   cout<<abcd<<endl;
+
+//  rotate
+   rotate(love.begin(),love.begin()+1, love.end());
 
 
 }
