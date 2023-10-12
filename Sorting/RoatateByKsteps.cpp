@@ -6,6 +6,7 @@ vector<int> rotateByKsteps( int arr[], int k){
    vector<int> temp(6);
 
    for(int i=0; i<6; i++){
+    //be;low is the formula 
      temp[(i+k)%6] = arr[i];  // 6 is the size of the array
    }
    
