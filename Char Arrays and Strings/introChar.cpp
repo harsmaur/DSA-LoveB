@@ -26,7 +26,7 @@ void ReverseString(char name[], int n)
 }
 
 char toLowerCase(char ch){
-    if(ch >='a' && ch <='z'){ //check if already in lowercase
+    if((ch >='a' && ch <='z') || (ch >='0' && ch <='9')){ //check if already in lowercase
         return ch;
     }
     else{
