@@ -25,6 +25,31 @@ void ReverseString(char name[], int n)
     }
 }
 
+char toLowerCase(char ch){
+    if(ch >='a' && ch <='z'){ //check if already in lowercase
+        return ch;
+    }
+    else{
+        char temp = ch - 'A' + 'a';  // converting to lowercase
+        return temp;
+    }
+}
+//check Palindrome
+bool CheckPalindrome(char a[], int len){
+    int s = 0;
+    int e = len-1;
+    while(s<=e){
+        if(toLowerCase(a[s]) != toLowerCase(a[e])){
+            return false;
+        }
+        else{
+            s++; e--;
+        }
+        
+    }
+    return true;
+}
+
 int main()
 {
     char name[20];
@@ -39,6 +64,9 @@ int main()
 
     ReverseString(name, n);
     cout << name << endl;
+
+    cout<<"Checking Palindrome"<<endl;
+    cout<<"The char is palindrome or not "<<CheckPalindrome(name, n)<<endl;
 
     return 0;
 }
