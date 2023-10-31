@@ -68,6 +68,7 @@ int main()
     cout<<"Checking Palindrome"<<endl;
     cout<<"The char is palindrome or not "<<CheckPalindrome(name, n)<<endl;
 
+
     //cin exeecution stops if ecountered a a space, tab or newline. Therefore we use cin.getline
     string bio;
     
