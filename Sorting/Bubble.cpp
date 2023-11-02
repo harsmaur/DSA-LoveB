@@ -25,6 +25,7 @@ void BubbleSort(int arr[], int n ){
         }
     }
 }
+
 int main()
 {
     int arr[7] = {3,12,6,21,3,176,4};

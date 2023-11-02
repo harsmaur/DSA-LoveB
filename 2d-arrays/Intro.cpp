@@ -1,21 +1,30 @@
 #include <iostream>
 using namespace std;
 
-
+//Search 
 int SerachElement(int arr[][3], int target, int row, int col){
-      for (int row = 0; row < 3; row++)
-    {
-        for (int col = 0; col < 3; col++)
-        {
-            if(arr[row][col] == target){
+     for (int i = 0; i < row; i++) {
+        for (int j = 0; j < col; j++) {
+            if (arr[i][j] == target) {
                 return 1;
             }
         }
-       
     }
     return 0;
 }
 
+
+//Find row wise sum 
+void printSum(int arr[][3], int row, int col){
+
+   for (int i = 0; i < row; i++) {
+        int sum = 0;
+        for (int j = 0; j < col; j++) {
+            sum += arr[i][j];
+        }
+        cout << sum << endl;
+    }
+}
 
 int main()
 {
@@ -60,7 +69,9 @@ int main()
 // seraching in 2d array  
 // passing column size is important in function
     cout<<SerachElement(arr, 1, 3, 3);
+    cout<<endl;
+    printSum(arr, 3, 3);
     return 0;
 
-    
+
 } 
