@@ -1,4 +1,5 @@
 #include <iostream>
+#include<climits>
 using namespace std;
 
 //Search 
@@ -25,6 +26,40 @@ void printSum(int arr[][3], int row, int col){
         cout << sum << endl;
     }
 }
+
+
+
+int largestRowSum(int arr[][3], int row, int col){
+    int maxi = INT_MIN;
+    int indexOFRow = -1;
+    for(int i =0; i< row; i++){
+        int sum = 0;
+     
+        for(int j = 0; j< col; j++){
+            sum += arr[i][j];
+        }
+
+        if(sum > maxi){
+            maxi = sum;
+            indexOFRow = i;
+        }
+    }
+    cout<<"Maxumum sum of the array rowWise is  "<<maxi<<endl;
+    return indexOFRow;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 int main()
 {
@@ -71,6 +106,10 @@ int main()
     cout<<SerachElement(arr, 1, 3, 3);
     cout<<endl;
     printSum(arr, 3, 3);
+
+
+    int ans = largestRowSum(arr, 3, 3 );
+    cout<<"MAX row is at index "<<ans<<endl;
     return 0;
 
 
