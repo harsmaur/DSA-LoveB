@@ -1,56 +1,30 @@
 class Solution {
 public:
-    vector<int> spiralOrder(vector<vector<int>>& matrix) {
-        vector<int> ans;
+    bool searchMatrix(vector<vector<int>>& matrix, int target) {
+     
         int row = matrix.size();
         int col = matrix[0].size();
 
+        int start = 0;
+        int end = row*col-1;
+        int mid = start + (end - start)/2;
 
-        int count = 0;
-        int total = row*col;
-        
-        // index initialization
-        int StartingRow = 0;
-        int StartingCol= 0;
-        int EndingRow = row-1;
-        int EndingCol = col-1;
+        while(start <= end){
+            int element = matrix[mid/col][mid%col];
 
-
-        while(count < total){
-
-            //print starting row
-            for(int index= StartingCol; index <= EndingCol && count < total; index++){
-             ans.push_back(matrix[StartingRow][index]);
-             count++;
+            if(element == target){
+                return true;
             }
-            StartingRow++;
 
-              //print ending col
-            for(int index= StartingRow; index <= EndingRow && count < total; index++){
-             ans.push_back(matrix[index][EndingCol]);
-             count++;
+           if(element < target){
+                start = mid+1;
+
             }
-            EndingCol--;
-           
-            //print ending row
-            for(int index= EndingCol; index >= StartingCol && count < total; index--){
-             ans.push_back(matrix[EndingRow][index]);
-             count++;
+            else{
+                end = mid-1;
             }
-            EndingRow--; 
-
-                //print starting col
-            for(int index= EndingRow; index >= StartingRow && count < total; index--){
-             ans.push_back(matrix[index][StartingCol]);
-             count++;
-            }
-            StartingCol++; // moving to the next column
-
-
-
-
+            mid = start + (end - start)/2;
         }
-        return ans;
-
+        return false;
     }
-}; 
+};
