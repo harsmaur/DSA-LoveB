@@ -23,21 +23,21 @@ public:
              ans.push_back(matrix[StartingRow][index]);
              count++;
             }
-            StartingRow++;
+            StartingRow++; // move to the next row
 
               //print ending col
             for(int index= StartingRow; index <= EndingRow && count < total; index++){
              ans.push_back(matrix[index][EndingCol]);
              count++;
             }
-            EndingCol--;
+            EndingCol--; // move to the previous col 
            
             //print ending row
             for(int index= EndingCol; index >= StartingCol && count < total; index--){
              ans.push_back(matrix[EndingRow][index]);
              count++;
             }
-            EndingRow--; 
+            EndingRow--;   // move to the previos row
 
                 //print starting col
             for(int index= EndingRow; index >= StartingRow && count < total; index--){
