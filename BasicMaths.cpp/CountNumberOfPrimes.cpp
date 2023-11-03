@@ -10,6 +10,8 @@ class Solution {
               }
           }
           return true;
+
+          
        }
 public:
     int countPrimes(int n) {
