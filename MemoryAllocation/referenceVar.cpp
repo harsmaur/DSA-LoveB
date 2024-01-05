@@ -12,6 +12,21 @@ void update(int &j){
     
 }
 
+//bad practice since all the var inside a function is local scoped
+
+// int& func(int n){
+//     int num  = a;
+//     int &ans = num;
+//     return ans;
+// }
+
+// int* func(int n){
+//     int num  = a;
+//     int *ans = num;
+//     return ans;
+// }
+
+
 int main()
 {
     int i = 5;
