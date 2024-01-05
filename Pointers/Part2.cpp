@@ -35,5 +35,39 @@ int main()
 
     cout<<"Size of &array "<<sizeof(&arr)<<endl;
     cout<<"Size of &pointer "<<sizeof(&p)<<endl;
+
+
+
+    int a[20] = {1,2,3,4};
+
+    cout<< &a[0] <<endl;
+    cout<< a <<endl;
+    cout<< &a <<endl;
+    
+    int *p2 = &a[0];
+
+    cout<< p2 <<endl; // adress of p pointing to 
+    cout<< *p2 <<endl;
+    cout<< &p2 <<endl; //address of p 
+
+
+
+
+     // symbol table content cant be changed
+     int brr[10];
+
+     //Error
+    //  brr = brr+1; 
+
+     int *ptr = &brr[0];
+
+     cout<< ptr <<endl;
+     ptr = ptr + 1;
+     cout<< ptr << endl;
+
+
+
+
+
     return 0;
 }
