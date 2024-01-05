@@ -21,10 +21,18 @@ int main()
         cin>>arr1[i];
     }
 
-cout<<"Printing values"<<endl;
+    cout<<"Printing values"<<endl;
        for(int i = 0; i<n; i++){
         cout<<arr1[i];
     }
 
+
+
+   //releasing memory
+   delete[] arr1;
+    cout<<"Printing values after deleting the heap m/m prints garbage values"<<endl;
+       for(int i = 0; i<n; i++){
+        cout<<arr1[i];
+    }
     return 0;
 }
