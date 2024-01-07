@@ -9,7 +9,7 @@ void BubbleSort(int arr[], int n ){
 
         isSorted = true; //until theres is not comaprison
 
-        for(int j = 0; j< n-i; j++){
+        for(int j = 0; j< n-i; j++){  // upto n-i comparison bcz from n-i to n elemnts are sorted laready
 
             if(arr[j] > arr[j+1]){
                 int temp = arr[j];
