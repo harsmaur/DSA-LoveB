@@ -1,7 +1,14 @@
 #include<iostream>
 using namespace std;
 
+void print(int *arr, int s, int e){
+    for(int i = s; i <= e; i++){
+        cout<<arr[i]<<" ";
+    } cout<<endl;
+}
 bool binarySearch(int * arr, int key, int s, int e){
+    cout<<endl;
+    print(arr, s, e);
 // base case not found key
     if(s>e){
         return false;
@@ -31,7 +38,7 @@ int main()
 
    int size = 8;
 
-   int key = 24;
+   int key = 11;
 
    bool ans = binarySearch(arr, key, 0, 7);
 
