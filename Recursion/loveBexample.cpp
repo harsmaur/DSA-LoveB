@@ -2,7 +2,9 @@
 using namespace std;
 
 void reachHome(int src, int dstn){
+
     cout<<"Source "<<src<<" "<<"Destination "<<dstn<<endl; 
+    
     //base case
     if(src == dstn){
         cout<<"Reached Destination"<<endl;
