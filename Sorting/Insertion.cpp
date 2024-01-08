@@ -1,16 +1,17 @@
 #include <iostream>
 using namespace std;
 
+
 void InsertionSort(int arr[], int n)
 {
-    for (int i = 0; i < n; i++)
+    for (int i = 1; i <= n-1; i++)
     {
-        int temp = arr[i];
+        int key = arr[i];
         int j = i - 1; // j is running reverse from i-1 to 0
 
         for (; j >= 0; j--)
         { // Inner loop to find the correct position for the current element by comparing it with the previous elements.
-            if (arr[j] > temp)
+            if (arr[j] > key)
             { // If the previous element is greater than the current element, shift the previous element to the right.
 
                 arr[j + 1] = arr[j]; // If the condition is true, it shifts the element at index 'j' one position to the right in the array.
@@ -20,7 +21,7 @@ void InsertionSort(int arr[], int n)
                 break; // nothing to do as element is already greater then temp
             }
         }
-        arr[j + 1] = temp; // insert the element that shifted position
+        arr[j + 1] = key; // insert the element that shifted position
     }
 }
 int main()
@@ -35,3 +36,4 @@ int main()
     }
     return 0;
 }
+
