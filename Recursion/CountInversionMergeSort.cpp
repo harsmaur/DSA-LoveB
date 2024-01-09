@@ -1,7 +1,7 @@
 #include<iostream>
 using namespace std;
-
-void merge(int *arr, int s, int e){
+long long merge(int *arr, int s, int e){
+    long long inv = 0;
     //find the mid
     int mid = (s+e)/2;
 
@@ -34,7 +34,7 @@ void merge(int *arr, int s, int e){
 
     while(index1 < len1 && index2 < len2){
 
-        if(first[index1] < second[index2]){
+        if(first[index1] <= second[index2]){   //<= because if the element is equal elements from the two subarrays are equal.
             arr[mainArrayIndex] = first[index1];
             mainArrayIndex++;
             index1++;
@@ -43,7 +43,11 @@ void merge(int *arr, int s, int e){
             arr[mainArrayIndex] = second[index2];
             mainArrayIndex++;
             index2++;
+            //add inversions
+            inv += len1-index1;
+            
         }
+       
     }
     
     // Copy the remaining elements of
@@ -60,45 +64,41 @@ void merge(int *arr, int s, int e){
 
    delete[] first;
    delete[] second;
+    return inv;
 
 }
 
 
 
-void mergeSort(int *arr, int s, int e){
+long long mergeSort(int *arr, int s, int e){
+    long long inv = 0;
     //base condition
     if(s>=e){
-        return;
+        return 0;
     }
 
     int mid = (s+e)/2;
 
     //sort left part
-    mergeSort(arr, s, mid);
+   inv += mergeSort(arr, s, mid);
 
     ///sort right part
-    mergeSort(arr, mid+1, e);
+   inv += mergeSort(arr, mid+1, e);
 
     //merge the sorted arrays
-    merge(arr, s, e);
+   inv += merge(arr, s, e);
+    return inv;
 
 }
-
 int main()
 {
-    
-    int arr[15] ={3,7,0,1,5,8,3,2,34,66,87,23,12,12,12};
-    int n = 15;
+       int arr[19] ={15, 28, 11, 20, 14, 7, 14, 2, 15, 4, 22, 19, 17, 1, 26, 6, 20, 2, 6 };
+    int n = 19;
     int start = 0;
     int end = n-1;
 
 
-    mergeSort(arr, start, end);
-
-    for(int i=0;i<n;i++){
-        cout << arr[i] << " ";
-    } cout << endl;
-
-
+   long long ans =  mergeSort(arr, start, end);
+   cout<<ans<<endl;
     return 0;
 }
