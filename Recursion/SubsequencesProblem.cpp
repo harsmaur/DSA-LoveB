@@ -1,5 +1,5 @@
 #include <bits/stdc++.h>
-
+using namespace std;
 // Recursive function to generate subsequences
 void solve(string str, string output, int index, vector<string> &ans) {
     // Base case: if index exceeds the length of str
