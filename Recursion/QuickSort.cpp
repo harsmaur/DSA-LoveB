@@ -1,3 +1,6 @@
+#include<iostream>
+using namespace std;
+
 // Function to partition the array around a pivot element
 int Partition(vector<int> &arr, int s, int e){
     int pivot = arr[s];  // Selecting the pivot element (first element in the range)
