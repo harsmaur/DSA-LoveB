@@ -1,3 +1,8 @@
+#include<iostream>
+#include <vector>
+using namespace std;
+
+
 class Solution {
 private:
     // Recursive function to generate subsets
