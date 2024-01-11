@@ -6,6 +6,8 @@ void print(int *arr, int s, int e){
         cout<<arr[i]<<" ";
     } cout<<endl;
 }
+
+
 bool binarySearch(int * arr, int key, int s, int e){
     cout<<endl;
     print(arr, s, e);
