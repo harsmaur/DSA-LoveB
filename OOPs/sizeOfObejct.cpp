@@ -12,3 +12,14 @@
 // Alignment refers to the requirement that certain types must be stored at addresses that are multiples of their size.
 // For example, on many systems, a 4-byte integer should be aligned on a 4-byte boundary.
 // The alignof operator in C++ can be used to query the alignment requirement of a type.
+
+
+class MyClass {
+private:
+    const int constantValue;
+
+public:
+    MyClass(int value) : constantValue(value) {
+        // Initialization list is used to initialize const member variable
+    }
+};
