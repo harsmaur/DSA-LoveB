@@ -8,7 +8,7 @@ inline int getMax(int &a, int &b){
 
 //reduced function call stack 
 //no exra m/m usage
-//compiler replaces the inline functioncall with its body 
+//compiler replaces the inline function call with its body 
 int main()
 {
 
