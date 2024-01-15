@@ -36,13 +36,28 @@ int getLengthOfList(Node * head){
 }
 
 void InsertAtHead(Node *&head, int data){
+    //empty list case
+    if(head == NULL){
+
+      Node * ptr = new Node(data);
+      head = ptr;
+    }else
+    {
     Node * ptr = new Node(data);
     ptr->next = head;
     head->prev = ptr;
     head = ptr;
+    }
+   
 }
 
 void InsertATEnd(Node * &head, int data){
+    //empty list case
+    if(head == NULL){
+        Node* ptr = new Node(data);
+        head = ptr;
+    }
+    else{
     Node* ptr = new Node(data);
     Node * p = head;
     while(p->next !=NULL){
@@ -50,6 +65,8 @@ void InsertATEnd(Node * &head, int data){
     }
     p->next = ptr;
     ptr->prev = p;
+    }
+   
 }
 
 void InsertAtIndex(Node * &head, int data, int index){
@@ -95,6 +112,6 @@ int main()
       InsertAtIndex(head, 50, 2);
       traverse(head);
 
-      
+
     return 0;
 }
