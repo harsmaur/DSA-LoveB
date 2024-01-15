@@ -52,6 +52,26 @@ void InsertATEnd(Node * &head, int data){
     ptr->prev = p;
 }
 
+void InsertAtIndex(Node * &head, int data, int index){
+   
+        Node * p = head;
+        Node * q = head->next;
+        int i = 0;
+        while(i != index-1){
+           p = p->next;
+           q = q->next;
+           i++;
+        }
+        
+        Node * ptr = new Node(data);
+        ptr->next = p->next;
+        q->prev = ptr;
+        p->next = ptr;
+        ptr->prev = p;
+
+    }
+
+
 
 int main()
 {
@@ -70,6 +90,11 @@ int main()
       InsertATEnd(head, 56);
       InsertATEnd(head, 57);
       traverse(head);
-         cout<<getLengthOfList(head)<<endl;
+      cout<<getLengthOfList(head)<<endl;
+
+      InsertAtIndex(head, 50, 2);
+      traverse(head);
+
+      
     return 0;
 }
