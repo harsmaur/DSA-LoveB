@@ -14,6 +14,15 @@ class Node{
 
     }
 
+    ~Node(){
+        int value = this->data;
+        if(next != NULL){
+            delete next;
+            next = NULL;
+        }
+        cout<<"Memory free for node with data" <<value<<endl;
+    }
+
 };
 
 void traverse(Node* head){
@@ -88,7 +97,16 @@ void InsertAtIndex(Node * &head, int data, int index){
 
     }
 
+void DeleteNode(Node* &head, int position){
+    if(position == 1){
+        Node * p = head;
+        p->next->prev = NULL;
+        head = p->next;
+        p->next = NULL; 
+        delete p;
+    }
 
+}
 
 int main()
 {
