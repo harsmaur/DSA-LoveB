@@ -1,5 +1,14 @@
 #include<iostream>
 using namespace std;
+class Node {
+    public:
+    int data;
+    Node * next;
+
+
+
+};
+
 
 //iterative solution 
 Node * reverseLinkedList(Node * head){
@@ -18,7 +27,7 @@ Node * reverseLinkedList(Node * head){
         curr = forward;
     }
 }
-
+//2
 void reverseRecursive(Node * head, Node * curr, Node * prev ){
     if(curr == NULL){
         head = prev;
@@ -28,6 +37,18 @@ void reverseRecursive(Node * head, Node * curr, Node * prev ){
     reverseRecursive(head, forward, curr);
     curr->next = prev;
 
+}
+
+//3 
+Node * reverse(Node * head){
+   if(head == NULL || head->next == NULL){
+    return head;
+   }
+    Node * chotaHead = reverse(head->next);
+    head->next->next = head;
+    head->next = NULL;
+
+    return  chotaHead;
 }
 
 
