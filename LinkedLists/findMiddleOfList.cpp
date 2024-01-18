@@ -49,3 +49,7 @@ Node *findMiddle(Node *head) {
     return temp;
 }
 
+
+
+//approach 2
+
