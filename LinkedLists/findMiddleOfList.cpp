@@ -1,6 +1,7 @@
-/*
-Following is the class structure of the Node class:
 
+// Following is the class structure of the Node class:
+#include<iostream>
+using namespace std;
 class Node
 {
 public:
@@ -22,7 +23,11 @@ public:
         this->next = next;
     }
 };
-*/
+
+#include<iostream>
+using namespace std;
+
+
 int getLength(Node*head){
     int len = 0;
     while(head!=NULL){
@@ -53,3 +58,8 @@ Node *findMiddle(Node *head) {
 
 //approach 2
 
+int main()
+{
+    
+    return 0;
+}
