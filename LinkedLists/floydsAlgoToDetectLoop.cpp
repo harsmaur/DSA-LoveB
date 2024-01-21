@@ -31,12 +31,14 @@ bool floydDetect(Node *head)
         }
         slow = slow->next;
         if(slow == fast){
+            cout<<"Present at "<<slow->data<<endl;
             return true;
         }
     }
     return false;
 
 }
+
 
 int main()
 {
@@ -51,7 +53,7 @@ int main()
     node2->next = node3;
     node3->next = node4;
     node4->next = node5;
-    // node5->next = head->next;
+    node5->next = head->next;
 
  if(floydDetect(head)){
     cout<<"Cycle is present"<<endl;
