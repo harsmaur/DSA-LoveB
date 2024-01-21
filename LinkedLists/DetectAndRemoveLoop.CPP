@@ -1,4 +1,6 @@
-/*************************************************
+#include<iostream>
+using namespace std;
+
     
     class Node {
         public :
@@ -12,7 +14,6 @@
         }
     };
 
-*************************************************/
 Node * floyd(Node * head){
     if(head == NULL){
         return NULL;
