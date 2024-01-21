@@ -22,7 +22,7 @@ Node *  floydDetect(Node *head)
     }
 
     Node * slow = head;
-    Node * fast = head->next;
+    Node * fast = head;
 
     while(slow != NULL && fast != NULL && fast->next != NULL){
         fast = fast->next;
@@ -94,8 +94,8 @@ int main()
     node2->next = node3;
     node3->next = node4;
     node4->next = node5;
-     node5->next = node6;
-      node6->next = node7;
+    node5->next = node6;
+    node6->next = node7;
     node7->next = node2;
     // traverse(head);
 

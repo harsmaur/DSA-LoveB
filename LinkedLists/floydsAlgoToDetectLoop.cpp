@@ -22,7 +22,7 @@ bool floydDetect(Node *head)
     }
 
     Node * slow = head;
-    Node * fast = head->next;
+    Node * fast = head;
 
     while(slow != NULL && fast != NULL){
         fast = fast->next;
