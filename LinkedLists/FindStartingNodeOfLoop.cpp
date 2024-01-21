@@ -45,6 +45,9 @@ Node *getStartingNode(Node * head){
     }
 
    Node * intersectionNode = floydDetect(head);
+   if(intersectionNode == NULL){
+    return NULL;
+   }
    
    
    Node * slow = head;
