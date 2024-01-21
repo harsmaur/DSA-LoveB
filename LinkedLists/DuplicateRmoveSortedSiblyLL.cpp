@@ -23,6 +23,7 @@ public:
         while(curr != NULL && curr->next != NULL){
 
             if(curr->val == curr->next->val){
+                //store the next next node 
                 ListNode * next_next = curr->next->next;
                 ListNode * NodeToDelete = curr->next;
                 delete(NodeToDelete);
