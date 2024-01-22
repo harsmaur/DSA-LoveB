@@ -1,5 +1,5 @@
 #include <bits/stdc++.h> 
-/********************************
+
     class Node
     {
     public:
@@ -12,7 +12,6 @@
         }
     };
 
-********************************/
 Node * getMiddleNode(Node * head){
     Node * slow = head;
     Node* fast = head->next; // in circular we start fast from head->next 
