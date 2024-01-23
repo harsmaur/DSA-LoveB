@@ -47,7 +47,7 @@ public:
               curr1 = next1;
               next1 = next1->next;
 
-              if(next1 == NULL){
+              if(next1 == NULL){ // if next1 becomes null append the remaining  list2 to list1 
                   curr1->next = curr2;
                   return list1;
               }
