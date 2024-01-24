@@ -33,3 +33,7 @@ class Solution{
         return solve(arr);
     }
 };
+
+
+// tc = o(n)
+// sc = o(n);
