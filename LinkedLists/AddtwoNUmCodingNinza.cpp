@@ -1,7 +1,7 @@
 #include <bits/stdc++.h> 
-/************************************************************
 
-    Following is the linked list node structure:
+
+    // Following is the linked list node structure:
     
     template <typename T>
     class Node {
@@ -15,7 +15,6 @@
         }
     };
 
-************************************************************/
 Node<int>* reversed(Node<int>* head){
     Node<int>* curr = head;
     Node<int>* prev = NULL;
