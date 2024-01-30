@@ -11,10 +11,10 @@ bool valid(string s){
     for(int i =0; i< s.size(); i++){
         //if opening bracket then push to the stack
         if(s[i] == '(' || s[i] == '{' || s[i] == ''){
-            st,push(s[i]);
-        }else if ( (s[i] == ')' && !st.empty() && st.top == s[i]) ||
-                   (s[i] == '}' && !st.empty() && st.top == s[i]) ||
-                   (s[i] == ']' && !st.empty() && st.top == s[i])
+            st.push(s[i]);
+        }else if ( (s[i] == ')' && !st.empty() && st.top() == s[i]) ||
+                   (s[i] == '}' && !st.empty() && st.top() == s[i]) ||
+                   (s[i] == ']' && !st.empty() && st.top() == s[i])
                    ){
                      
                      //if closing bracket and stack not empty
