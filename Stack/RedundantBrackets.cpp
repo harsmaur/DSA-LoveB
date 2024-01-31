@@ -22,7 +22,7 @@ bool findredundant(string &s){
                 //until an opening bracket is found search for a operator
                 while(st.top() != '('){
                     char top = st.top();
-                      if(top == '(' || top == '+' || top == '-' || top == '/' || top == '*'){
+                      if( top == '+' || top == '-' || top == '/' || top == '*'){
                        
                         redundant = false;
                       }
