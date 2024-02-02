@@ -10,11 +10,11 @@ vector<int> findNS(vector<int> & arr, int n){
 
       for(int i = n-1; i>=0; i--){
         int curr = arr[i];
-
+        // jab tak chota nhi milta pop
         while(s.top() >= curr){
             s.pop();
         }
-
+         //chota mil gya store in ans and push curr in stack
         ans[i] = s.top();
         s.push(curr);
       }
