@@ -20,6 +20,9 @@ vector<int> findNS(vector<int> & arr, int n){
       }
       return ans;
 }
+
+
+//similary to find previos smaller element change loop condition flow
 int main()
 {
     
