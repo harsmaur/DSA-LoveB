@@ -62,7 +62,7 @@ public:
         vector<int> prev(n);
         prev = prevSmallerElement(heights, n);
 
-        int area = INT_MIN;
+        int area = INT_MIN32;
         for (int i = 0; i < n; i++) {
             int length = heights[i];
 
