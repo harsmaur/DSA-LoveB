@@ -1,3 +1,6 @@
+#include<iostream>
+using namespace std;
+
 
 class Solution 
 {
@@ -14,14 +17,14 @@ class Solution
     //Function to find if there is a celebrity in the party or not.
     int celebrity(vector<vector<int> >& M, int n) 
     {
-        
+        //CREATE A STACK
         stack<int> s;
         //push all elements in stack 
         for(int i=0; i<n; i++){
             s.push(i);
         }
         
-        //step2
+        //step2 WHILE SIZE is not 1 
          while(s.size() > 1){
              int a = s.top();
              s.pop();
@@ -36,7 +39,7 @@ class Solution
          }
         //  step3
          int candidate = s.top();
-        //verify the songle e;eent left in the stack
+        //verify the single element left in the stack though its zeroCount and oneCount.
         
          int zeroCount = 0;
          for(int i=0; i<n; i++){
@@ -56,6 +59,7 @@ class Solution
                  oneCount++;
              }
          }
+         
          
          if(oneCount != n-1){
              return -1;
