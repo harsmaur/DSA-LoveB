@@ -33,3 +33,6 @@
 		 
 		 
 		}
+
+		//we do not q.pop() the value if it's count <= 1 because until its count is 1, it remains FIRST non repeating character for the upcoming stream
+// ye point dry run karke samjh aya.  bahot sahi
