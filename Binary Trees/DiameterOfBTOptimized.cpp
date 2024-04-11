@@ -16,11 +16,11 @@ pair<int, int> diameterFast(Node * root){
    // first value of pair stores the diameter second stores height
     int opt1 = left.first; // max diameterr from the left
     int opt2 = right.first; // max diamter from the right
-    int opt3 = left.second + right.second +1;
+    int opt3 = left.second + right.second +1; // max diameter from combiantio nof both right and left
 
     pair<int, int> ans;
-    ans.first = max(opt1, max(opt2, opt3));
-    ans.second = max(left.second, right.second) + 1;
+    ans.first = max(opt1, max(opt2, opt3));  //diameter is max of all thrree cases left right or combination of both 
+    ans.second = max(left.second, right.second) + 1; 
     return ans;
     
 
