@@ -37,7 +37,7 @@ class Solution {
            }
            
            if(front->left){
-               nodeToParent[front->left] = front;
+               nodeToParent[front->left] = front;     //child  =  parent (mapping)
                q.push(front->left);
            }
            
@@ -93,6 +93,7 @@ class Solution {
                
                
            }
+           //check flag if true increment the ans
            if(flag == true){
                ans++;
            }
