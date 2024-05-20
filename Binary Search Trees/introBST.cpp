@@ -102,6 +102,67 @@ Node * insertIntoBST(Node * &root, int d){
 
 
 }
+Node *MinValue(Node *root)
+{
+    Node *temp = root;
+    while (temp->left != NULL)
+    {
+        temp = temp->left;
+    }
+    return temp;
+}
+
+Node * deleteFromBST(Node* root, int val){
+    // base case
+    if(root == NULL){
+        return root;
+    }
+
+    if(root->data == val){
+        //0 child
+        if(root->left == NULL && root->right == NULL){
+            delete root;
+            return NULL;
+        }
+
+        //1 child
+          //left child
+          if(root->left !=  NULL && root->right == NULL){
+              Node * temp = root->left;
+              delete root;
+              return temp;
+
+          }
+
+          //right child
+        if(root->left ==  NULL && root->right != NULL){
+              Node * temp = root->right;
+              delete root;
+              return temp;
+
+          }
+
+        //2 child
+         
+         if(root->left != NULL && root->right !=NULL){
+            int mini = MinValue(root->right)->data;
+            root->data = mini;
+            root->right = deleteFromBST(root->right, mini);
+            return root;
+           
+
+         }
+    }
+    else if(root->data > val){
+        root->left = deleteFromBST(root->left, val);
+        return root;
+    }
+    else{
+        root->right = deleteFromBST(root->right, val);
+        return root;
+    }
+     return root;
+}
 
 void takeInput(Node * &root){
       int data;
@@ -127,12 +188,26 @@ int main()
     cout<<"Printing inorder "<<endl;
     inorder(root);
 
-cout<<endl;
+    cout<<endl;
     cout<<"Printing preOrder "<<endl;
     preOrder(root);
-cout<<endl;
+    cout<<endl;
      cout<<"Printing postorder "<<endl;
     postOrder(root);
 
+    root = deleteFromBST(root, 50);
+
+    cout<<"Printing Level Order"<<endl;
+    LevelOrderTraversal(root);
+
+    cout<<"Printing inorder "<<endl;
+    inorder(root);
+
+    cout<<endl;
+    cout<<"Printing preOrder "<<endl;
+    preOrder(root);
+    cout<<endl;
+     cout<<"Printing postorder "<<endl;
+    postOrder(root);
     return 0;
 }
