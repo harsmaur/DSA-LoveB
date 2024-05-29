@@ -34,6 +34,8 @@ int main()
         cin >> u >> v;
         adjList[u].push_back(v); // on the uth index store the node v
         adjList[v].push_back(u); // on the vth index store the node u
+
+        // if theres edge between only u ----> v then  adjList[v].push_back(u);  is not required similiarly for the v---->u case
     }
     
     return 0;
