@@ -1,4 +1,6 @@
 #include<iostream>
+#include<vector>
+#include<queue>
 using namespace std;
 
 vector<int> bfstraversal(int V, vector<int> adj[]){
