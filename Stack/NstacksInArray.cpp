@@ -25,6 +25,8 @@ public:
             top[i] = -1;
         }
 
+        
+
         //initialise next
         for(int i=0; i<s; i++){
             next[i] = i+1;
@@ -80,3 +82,4 @@ public:
 
     }
 };
+
