@@ -17,7 +17,7 @@ bool detect(int src; vector<int> adj[], int visi[]){
             if(!visi[adjNode]){
                 visi[adjNode] = 1;
                 q.push({adjNode, node});
-            }else if(parent != adjNode){
+            }else if(parent != adjNode){  // if the current node is  visited and parent is not adjacent node then theres a cycle
                 return true;
             }
         }

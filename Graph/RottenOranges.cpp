@@ -40,7 +40,7 @@ class Solution
         
         int time = 0;
         int drow[] =  {-1, 0, +1, 0};
-        int dcol[] =  {0,  +1,  0,-1};
+        int dcol[] =  {0,  +1, 0, -1};
         int cnt = 0;
         while(!q.empty() ){
             //take a rotten orange (i, j, tm) 

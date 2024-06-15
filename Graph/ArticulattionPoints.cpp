@@ -24,7 +24,7 @@ class Solution {
                 // Update the low value of the current node
                 low[node] = min(low[node], low[it]);
                 
-                // Check if the current node is an articulation point
+                // Check if the current node is an articulation point the 
                 if(low[it] >= tin[node] && parent != -1) {
                     mark[node] = 1;  // Mark the current node as an articulation point
                 }
