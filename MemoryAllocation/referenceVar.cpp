@@ -3,7 +3,8 @@ using namespace std;
 
 //same m/m different names
 // why?
-//when we update value in a function by function call it gets updated by the call by value method but the value of that var is not changed out of the funciton scope
+//when we update value in a function by function call it gets updated by the call by
+//  value method but the value of that var is not changed out of the funciton scope
 
 void update(int &j){ 
     // by this way the copy is not created at function but the actual value is changed

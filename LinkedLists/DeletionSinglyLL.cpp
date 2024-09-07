@@ -72,7 +72,7 @@ void traverse(Node* ptr){
 
 int main()
 {
-     Node * head = new Node(1);
+    Node * head = new Node(1);
    
     Node * node2 = new Node(2);
     Node * node3 = new Node(3);

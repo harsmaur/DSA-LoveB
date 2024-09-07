@@ -41,7 +41,7 @@ void InsertAtFirst(Node *&head, int data)
             p = p->next;
         }
 
-        Node *ptr = new Node(data);
+        Node *ptr = new Node(data);.3
         p->next = ptr;
         ptr->next = head;
     }
