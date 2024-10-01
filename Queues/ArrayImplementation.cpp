@@ -9,7 +9,7 @@ class Queue {
     int size;
 public:
     Queue() {
-        size = 100001;
+       size = 100001;
        arr = new int[size];
        qfront = 0;
        rear = 0;

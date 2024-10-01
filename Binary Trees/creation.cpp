@@ -147,8 +147,7 @@ int main()
     root = buildTree(root);
     // 1 3 7 -1 -1 11 -1 -1 5 17 -1 -1 -1 
     //level order traversal
-    cout<<"Printing the level Order Traversal "<<endl;
-    LevelOrderTraversal(root);
+   
 
     cout<<"Inorder"<<endl;
     inorder(root);
@@ -164,7 +163,9 @@ int main()
 
     Node * root = NULL;
     BuildFromLevelOrder(root);
+     cout<<"Printing the level Order Traversal "<<endl;
     LevelOrderTraversal(root);
+    // LevelOrderTraversal(root);
     // 1 3 5 7 11 17 -1 -1 -1 -1 -1 -1 -1 
 
 
